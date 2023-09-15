@@ -1,17 +1,27 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { HomeComponent } from './home/home.component';
-import { AboutComponent } from './about/about.component';
+import { CreateCategoryComponent } from './create-category/create-category.component';
+import { CategoryListComponent } from './category-list/category-list.component';
+import { UpdateCategoryComponent } from './update-category/update-category.component';
 
 const routes: Routes = [
   {
-    path: "home",
-    component: HomeComponent,
+    path: "categories",
+    component: CategoryListComponent
   },
   {
-    path: "about",
-    component: AboutComponent,
+    path: "create",
+    component: CreateCategoryComponent
   },
+  {
+    path: "update/:id",
+    component: UpdateCategoryComponent
+  },
+  {
+    path: '',
+    redirectTo: 'categories',
+    pathMatch: 'full'
+  }
 ];
 
 @NgModule({

@@ -1,3 +1,13 @@
-<a routerLink="home">Home</a>
-<a routerLink="about">About</a>
-<router-outlet></router-outlet>
+<select name="" id="">
+    <option *ngFor="let c of categories" value="{{c.name}}">{{c.name}}</option>
+</select>
+<nav>
+    <ul>
+        <li><a routerLink="categories">List</a></li>
+        <li><a routerLink="create">Creat</a></li>
+    </ul>
+</nav>
+
+<div>
+    <router-outlet></router-outlet>
+</div>
